@@ -1,16 +1,48 @@
 # inventory-management-system
 Assignment+No1-2024 web serves
 
+# ERD ![Screenshot 2024-04-07 161430](https://github.com/khaled7hasan7/inventory-management-system/assets/131875788/b286c430-8a43-4771-9341-a94f4f6d4382)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
-Collection Resource (/Products)
+# 1:Collection Resource (/Products)
 | HTTP request (method URI) | Operation              | Description     |HTTP status codes |Request sample|Respose sample |
 |---------------------------|------------------------|-----------------|-----------------|-----------------|-----------------|
-| POST / Product            |Create                  | Create a new product   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource. |{ “name “:gaming mouse”,“Description “ :”Brand Redragon Color Black”,“Category “:“electronics”,“Price “:30}|HTTP/1.1 200 OK“Added successfully”|
-|GET/ Product               | Read                   |Show a product and see its details by id .   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|get /Product/8800 HTTP/1.1 ?id=55656Productget.com Authorization: Bearer your-access-token|{“id”: “55656 “,“name “:gaming mouse”,“Description “ :”Brand Redragon Color Black”,“Category “: “electronics”,“Price“:30}|
-| PUT / Product             |Update/Replace          |Updates an existing product by id .    |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|Put /Product/8800 HTTP/1.1 Host: Productget.com Authorization: Bearer your-access-token{“name “:gaming mouse”,“Description “ :”Brand Redragon Color red”,“Category “: “electronics”,“Price “:35}|HTTP/1.1 200 OK “Update successfully”|
-|PATCH/ Product             | Partial Update/Modify  |Partially updates an existing product by id .   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|PATCH /Product/8800 HTTP/1.1 /id?=55656{ "price": 19.99, }|HTTP/1.1 200 OK {“name “:gaming mouse”,“Description “ :”Brand Redragon Color red”,“Category “: “electronics”,“Price “:19.99}|
+| POST / Product            |Create                  | Create a new product   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource. |{ “name “:gaming mouse”,“Description “ :”Brand Redragon Color Black”,“Category “:“electronics”,“sellingPrice “:35,“PurchasingPrice “:30}|HTTP/1.1 200 OK“Added successfully”|
+|GET/ Product               | Read                   |Show a product and see its details by id .   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|get /Product/8800 HTTP/1.1 ?id=55656Productget.com Authorization: Bearer your-access-token|{“id”: “55656 “,“name “:gaming mouse”,“Description “ :”Brand Redragon Color Black”,“Category “: “electronics”,“sellingPrice “:35,“PurchasingPrice “:30}|
+| PUT / Product             |Update/Replace          |Updates an existing product by id .    |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|Put /Product/8800 HTTP/1.1 Host: Productget.com Authorization: Bearer your-access-token{“name “:gaming mouse”,“Description “ :”Brand Redragon Color red”,“Category “: “electronics”,“sellingPrice “:37,“PurchasingPrice “:30}|HTTP/1.1 200 OK “Update successfully”|
+|PATCH/ Product   | Partial Update/Modify  |Partially updates an existing product by id .   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|PATCH /Product/8800 HTTP/1.1 /id?=55656{ “PurchasingPrice “:33.5 }|HTTP/1.1 200 OK {“name “:gaming mouse”,“Description “ :”Brand Redragon Color red”,“Category “: “electronics”,“sellingPrice “:37,“PurchasingPrice “:33.5}|
 |DELETE/ Product            |Delete                  | Delete Product by id    |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|DELETE /Product/55656|“Detele successfully”|
-|GET/Product/{id}             |Read Products info       | Retrieves information about a specific product identified by its ID.   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|GET /Products/55656 HTTP/1.1 Host: localhost.com Authorization: Bearer your_access_token|{“id”: “55656 “,“name“ gaming mouse”,“Description “ :”Brand Redragon Color Black”,“Category “: “electronics”,“Price“:30}| 
+|GET/Product/{id}             |Read Products info       | Retrieves information about a specific product identified by its ID.   |200 (OK) :The request succeeded.404 Not Found: The requested product does not exist. 403 Forbidden: The user does not have permission to access the resource.|GET /Products/55656 HTTP/1.1 Host: localhost.com Authorization: Bearer your_access_token|{“id”: “55656 “,“name“ gaming mouse”,“Description “ :”Brand Redragon Color Black”,“Category “: “electronics”,,“sellingPrice “:37,“PurchasingPrice “:33.5}| 
 
 
 
@@ -18,7 +50,7 @@ Collection Resource (/Products)
 
 
 <br><br>
-Collection Resource (/supplier)
+# 2:Collection Resource (/supplier)
 | HTTP request (method URI) | Operation              | Description     |HTTP status codes |Request sample|Respose sample |
 |---------------------------|------------------------|-----------------|-----------------|-----------------|-----------------|
 | POST / supplier            |Create                  |Creates a new supplier resource  |201 Created: The supplier resource was successfully created.401 Unauthorized: Authentication credentials were missing or invalid.500 Internal Server Error: An unexpected error occurred on the server. |POST /supplier HTTP/1.1 Host: example.com Content-Type: application/json Authorization: Bearer your_access_token  {"name": "Ahmad saleh Omar","phone": "052243665","city": "Ramallah","email": "Ahmad-5saleh@gmail.com","description": ""}|HTTP/1.1 200 OK“Added successfully”|
@@ -33,38 +65,8 @@ Collection Resource (/supplier)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br>
-Collection Resource (/store item)
+# 3:Collection Resource (/store item)
 | HTTP request (method URI) | Operation              | Description     |HTTP status codes |Request sample|Respose sample |
 |---------------------------|------------------------|-----------------|-----------------|-----------------|-----------------|
 | POST / store-item            |Create                  |Creates a new store item. |400 Bad Request: The request was malformed or contained invalid data.403 Forbidden: The user does not have permission to create a store item.|POST /store-items HTTP/1.1  {"productId": "10","storeId": "ram32","totalQuantity": 100}|successfully created|
@@ -76,26 +78,8 @@ Collection Resource (/store item)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br>
-Collection Resource (/Store)
+# 4:Collection Resource (/Store)
 | HTTP request (method URI) | Operation              | Description     |HTTP status codes |Request sample|Respose sample |
 |---------------------------|------------------------|-----------------|-----------------|-----------------|-----------------|
 | POST / Store            |Create                  |Creates a new store. |201 Created: The store was successfully created.400 Bad Request: The request was malformed or contained invalid data.500 Internal Server Error: An unexpected error occurred on the server.|POST /store HTTP/1.1   {"id": "ram32","location": "Ramallah Al-Bireh Street under the traffic circle" ,"description":""}|HTTP/1.1 201 Created "uccessfully created" "id": "ram32","location": "Ramallah Al-Bireh Street under the traffic circle","description":""} |
@@ -108,10 +92,6 @@ Collection Resource (/Store)
 
 
 
-
-  {"id": "ram32","location": "Ramallah Al-Bireh Street under the traffic circle"}
-
-  {"id": "ram33","location": "Ramallah Al-Bireh Street "}
 
 
 
