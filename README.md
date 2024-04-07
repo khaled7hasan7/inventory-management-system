@@ -1,20 +1,27 @@
 # inventory-management-system
 Assignment+No1-2024 web serves
 
+
+
+
+In this homework assignment, we have developed an API specification using the OpenAPI Specification version 3.1.0 for an inventory management system. The API is designed to facilitate the management of various entities such as products, suppliers, store items, and stores within the system. The OpenAPI Specification provides a standardized and machine-readable format to describe RESTful APIs, making it easier for developers to understand and interact with the API endpoints.
+
+Throughout the development process, we have meticulously defined the endpoints, request and response payloads, HTTP methods, and status codes for each operation. This ensures that the API follows industry best practices and is easy to integrate into existing systems or develop client applications against.
+
+Moreover, we have included example payloads for different API operations, demonstrating the expected data format and structure. These examples serve as valuable references for developers during the implementation phase, helping them accurately construct requests and handle responses.
+
+<br><br>
+<hr>
+# API LINK
+https://app.swaggerhub.com/apis/1191494_1/inventory-management-system/1.0.0#/Product
+
+
+
+<br><br>
+<hr>
+
+The chart you sent depicts a relational database schema  designed to manage an inventory-management-system. It shows various entities related to the store, including  customers, products, orders, employees, and suppliers.  Here’s a breakdown of the tables and their relationships:
 # ERD ![Screenshot 2024-04-07 161430](https://github.com/khaled7hasan7/inventory-management-system/assets/131875788/b286c430-8a43-4771-9341-a94f4f6d4382)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
